@@ -1,35 +1,39 @@
 var expect = {
-  equals: function(first, second) {
+  isEqual: function(first, second) {
     if (first === second) {
-      document.getElementById("output").innerHTML =
-        "<font color='green'>PASS: [" +
+      document.getElementById("output").innerHTML +=
+        "<br><font color='green'>PASS: [" +
         first +
         "] is equal to [" +
         second +
-        "]";
+        "]</br>";
     } else {
-      document.getElementById("output").innerHTML =
-        "<font color='red'>FAIL: [" +
+      document.getElementById("output").innerHTML +=
+        "<br><font color='red'>FAIL: [" +
         first +
         "] is not equal to [" +
         second +
-        "]";
+        "]</br>";
     }
   },
 
-  exists: function(element) {
+  isNull: function(element) {
     if (element === null) {
-      console.log("%cFAIL: " + element + " is empty", "color:red");
+      document.getElementById("output").innerHTML +=
+        "<br><font color='green'>PASS: [" + element + "] is null</br>";
     } else {
-      console.log("%cPASS: " + element + " exists", "color:green");
+      document.getElementById("output").innerHTML +=
+        "<br><font color='red'>FAIL: [" + element + "] is not null</br>";
     }
   },
 
   isTrue: function(test) {
-    if (!test) {
-      console.log("%cFAIL: " + test + " is false", "color:red");
+    if (test) {
+      document.getElementById("output").innerHTML +=
+        "<br><font color='green'>PASS: [" + test + "] is true</br>";
     } else {
-      console.log("%cPASS: " + test + " is true", "color:green");
+      document.getElementById("output").innerHTML +=
+        "<br><font color='red'>FAIL: [" + test + "] is false</br>";
     }
   }
 };
