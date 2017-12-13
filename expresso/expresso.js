@@ -1,7 +1,8 @@
 var expect = {
-  isEqual: function(first, second) {
+  isEqual: function(description, first, second) {
     if (first === second) {
       document.getElementById("output").innerHTML +=
+        description +
         "<br><li><font color='green'>PASS: [" +
         first +
         "] is equal to [" +
@@ -17,25 +18,35 @@ var expect = {
     }
   },
 
-  isNull: function(element) {
+  isNull: function(description, element) {
     if (element === null) {
       document.getElementById("output").innerHTML +=
-        "<br><li><font color='green'>PASS: [" + element + "] is null</li></br>";
+        description +
+        "<br><li><font color='green'>PASS: [" +
+        element +
+        "] is null</li></br>";
     } else {
       document.getElementById("output").innerHTML +=
+        description +
         "<br><li><font color='red'>FAIL: [" +
         element +
         "] is not null</li></br>";
     }
   },
 
-  isTrue: function(test) {
+  isTrue: function(description, test) {
     if (test) {
       document.getElementById("output").innerHTML +=
-        "<br><li><font color='green'>PASS: [" + test + "] is true</li></br>";
+        description +
+        "<br><li><font color='green'>PASS: [" +
+        test +
+        "] is true</li></br>";
     } else {
       document.getElementById("output").innerHTML +=
-        "<br><li><font color='red'>FAIL: [" + test + "] is false</li></br>";
+        description +
+        "<br><li><font color='red'>FAIL: [" +
+        test +
+        "] is false</li></br>";
     }
   }
 };
