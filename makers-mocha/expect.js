@@ -1,15 +1,19 @@
 var expect = {
   equals: function(first, second) {
-    if (!(first === second)) {
-      console.log(
-        "%cFAIL: [" + first + "] is not equal to [" + second + "]",
-        "color:red"
-      );
+    if (first === second) {
+      document.getElementById("output").innerHTML =
+        "<font color='green'>PASS: [" +
+        first +
+        "] is equal to [" +
+        second +
+        "]";
     } else {
-      console.log(
-        "%cPASS: [" + first + "] is equal to [" + second + "]",
-        "color:green"
-      );
+      document.getElementById("output").innerHTML =
+        "<font color='red'>FAIL: [" +
+        first +
+        "] is not equal to [" +
+        second +
+        "]";
     }
   },
 
