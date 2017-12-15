@@ -1,11 +1,10 @@
 var describe = function(description, test) {
-  document.getElementById("output").innerHTML +=
-    "<br><b>" + description + "</b></br>";
+  document.getElementById("output").innerHTML += "<b>" + description + "</b>";
   try {
     test();
   } catch (err) {
     document.getElementById("output").innerHTML +=
-      "<b>" + "</b><br> <ul> error: " + err.message + "</ul><br>";
+      "<br><li>error: " + err.message + "</li></br>";
   }
 };
 
