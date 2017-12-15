@@ -50,3 +50,14 @@ var expect = {
     }
   }
 };
+
+var describe = function(description, test) {
+  document.getElementById("output").innerHTML += "<b>" + description + "</b>";
+  try {
+    test;
+  } catch (err) {
+    document.getElementById("output").innerHTML +=
+      "<b>⚠️" + "</b><br> <ul> error: " + err.message + "</ul><br>";
+    console.error(err);
+  }
+};
