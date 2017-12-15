@@ -1,10 +1,10 @@
 describe("#initialize", function() {
-  var noteslist = new NotesList();
-  expect.isEqual("blank array is loaded", noteslist.list.length, 0);
+  var notes = new Notes();
+  expect.isEqual("blank array is loaded", notes.list.length, 0);
 });
 
 describe("#create", function() {
-  var list = new List();
-  notelist.add();
-  expect.isEqual("can create and store a note", noteslist.list, "hello");
+  var notes = new Notes();
+  notes.add("hello");
+  expect.isEqual("can create and store a note", notes.list[0], "hello");
 });

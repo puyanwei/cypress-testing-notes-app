@@ -1,5 +1,6 @@
 var describe = function(description, test) {
-  document.getElementById("output").innerHTML += "<b>" + description + "</b>";
+  document.getElementById("output").innerHTML +=
+    "<br><b>" + description + "</b></br>";
   try {
     test();
   } catch (err) {
