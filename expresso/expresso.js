@@ -1,3 +1,14 @@
+var describe = function(description, test) {
+  document.getElementById("output").innerHTML +=
+    "<br><b>" + description + "</b></br>";
+  try {
+    test();
+  } catch (err) {
+    document.getElementById("output").innerHTML +=
+      "<b>" + "</b><br> <ul> error: " + err.message + "</ul><br>";
+  }
+};
+
 var expect = {
   isEqual: function(description, first, second) {
     if (first === second) {
@@ -48,16 +59,5 @@ var expect = {
         test +
         "] is false</li></br>";
     }
-  }
-};
-
-var describe = function(description, test) {
-  document.getElementById("output").innerHTML += "<b>" + description + "</b>";
-  try {
-    test;
-  } catch (err) {
-    document.getElementById("output").innerHTML +=
-      "<b>⚠️" + "</b><br> <ul> error: " + err.message + "</ul><br>";
-    console.error(err);
   }
 };
