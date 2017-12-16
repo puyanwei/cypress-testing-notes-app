@@ -6,6 +6,7 @@ var describe = function(description, test) {
   } catch (err) {
     document.getElementById("output").innerHTML +=
       "<br><li>error: " + err.message + "</li></br>";
+    console.log(err);
   }
 };
 
