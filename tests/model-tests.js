@@ -1,9 +1,9 @@
-describe("#initialize", function() {
+describe("List #initialize", function() {
   var list = new List();
   expect.isEqual("blank array is loaded", list.notelist.length, 0);
 });
 
-describe("#add", function() {
+describe("List #add", function() {
   var list = new List();
   list.add("hello");
   expect.isEqual(
