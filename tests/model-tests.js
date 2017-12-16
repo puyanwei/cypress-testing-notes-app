@@ -17,5 +17,5 @@ describe("#add", function() {
     list.notelist[1].view(),
     "goodbye"
   );
-  expect.isEqual("there are two list in the list", list.notelist.length, 2);
+  expect.isEqual("there are two notes in the list", list.notelist.length, 2);
 });
