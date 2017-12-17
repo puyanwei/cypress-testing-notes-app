@@ -9,24 +9,15 @@ var describe = function(description, test) {
     console.log(err);
   }
 };
-
+//prettier-ignore
 var expect = {
   isEqual: function(description, first, second) {
     if (first === second) {
       document.getElementById("output").innerHTML +=
-        description +
-        "<br><li><font color='green'>PASS: [" +
-        first +
-        "] is equal to [" +
-        second +
-        "]</li></br>";
+        description + "<br><li><font color='green'><xmp>PASS: [" + first + "] is equal to [" + second + "]</xmp></li></br>";
     } else {
       document.getElementById("output").innerHTML +=
-        "<br><li><font color='red'>FAIL: [" +
-        first +
-        "] is not equal to [" +
-        second +
-        "]</li></br>";
+        "<br><li><font color='red'>FAIL: [" + first + "] is not equal to [" + second + "]</li></br>";
     }
   },
 
