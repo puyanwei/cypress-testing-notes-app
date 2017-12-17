@@ -1,7 +1,8 @@
 describe("View #convert", function() {
   var view = new View();
-  expect.isTrue(
+  expect.isEqual(
     "converts the note into a HTML list",
-    view.convert("hello") === "<br><ul>hello</br></ul>"
+    view.convert(list.notelist),
+    "<br><ul>hello</ul></br>"
   );
 });
