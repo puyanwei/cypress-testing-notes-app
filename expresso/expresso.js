@@ -9,15 +9,23 @@ var describe = function(description, test) {
     console.log(err);
   }
 };
-//prettier-ignore
 var expect = {
   isEqual: function(description, first, second) {
     if (first === second) {
       document.getElementById("output").innerHTML +=
-        description + "<br><li><font color='green'><xmp>PASS: [" + first + "] is equal to [" + second + "]</xmp></li></br>";
+        description +
+        "<br><font color='green'><xmp>PASS: [" +
+        first +
+        "] is equal to [" +
+        second +
+        "]</xmp></br>";
     } else {
       document.getElementById("output").innerHTML +=
-        "<br><li><font color='red'>FAIL: [" + first + "] is not equal to [" + second + "]</li></br>";
+        "<br><li><font color='red'>FAIL: [" +
+        first +
+        "] is not equal to [" +
+        second +
+        "]</li></br>";
     }
   },
 
@@ -25,15 +33,15 @@ var expect = {
     if (element === null) {
       document.getElementById("output").innerHTML +=
         description +
-        "<br><li><font color='green'>PASS: [" +
+        "<br><font color='green'><xmp>PASS: [" +
         element +
-        "] is null</li></br>";
+        "] is null</xmp></br>";
     } else {
       document.getElementById("output").innerHTML +=
         description +
-        "<br><li><font color='red'>FAIL: [" +
+        "<br><li><font color='red'><xmp>FAIL: [" +
         element +
-        "] is not null</li></br>";
+        "] is not null</xmp></br>";
     }
   },
 
@@ -41,15 +49,15 @@ var expect = {
     if (test) {
       document.getElementById("output").innerHTML +=
         description +
-        "<br><li><font color='green'>PASS: [" +
+        "<br><font color='green'></xmp>PASS: [" +
         test +
-        "] is true</li></br>";
+        "] is true</xmp></br>";
     } else {
       document.getElementById("output").innerHTML +=
         description +
         "<br><li><font color='red'>FAIL: [" +
         test +
-        "] is false</li></br>";
+        "] is false</xmp></br>";
     }
   }
 };
