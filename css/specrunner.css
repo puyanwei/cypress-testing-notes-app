@@ -4,3 +4,8 @@ body {
   font-weight: 300;
 }
 
+.espresso-top {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
