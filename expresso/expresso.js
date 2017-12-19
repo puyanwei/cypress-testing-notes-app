@@ -5,7 +5,7 @@ var describe = function(description, test) {
     test();
   } catch (err) {
     document.getElementById("output").innerHTML +=
-      "<br><li>error: " + err.message + "</li></br>";
+      "<br>error: " + err.message + "</br>";
     console.log(err);
   }
 };
@@ -21,11 +21,11 @@ var expect = {
         "]</xmp></br>";
     } else {
       document.getElementById("output").innerHTML +=
-        "<br><li><font color='red'>FAIL: [" +
+        "<br><font color='red'>FAIL: [" +
         first +
         "] is not equal to [" +
         second +
-        "]</li></br>";
+        "]</br>";
     }
   },
 
@@ -39,7 +39,7 @@ var expect = {
     } else {
       document.getElementById("output").innerHTML +=
         description +
-        "<br><li><font color='red'><xmp>FAIL: [" +
+        "<br><font color='red'><xmp>FAIL: [" +
         element +
         "] is not null</xmp></br>";
     }
@@ -49,13 +49,13 @@ var expect = {
     if (test) {
       document.getElementById("output").innerHTML +=
         description +
-        "<br><font color='green'></xmp>PASS: [" +
+        "<br><font color='green'><xmp>PASS: [" +
         test +
         "] is true</xmp></br>";
     } else {
       document.getElementById("output").innerHTML +=
         description +
-        "<br><li><font color='red'>FAIL: [" +
+        "<br><font color='red'>FAIL: [" +
         test +
         "] is false</xmp></br>";
     }
