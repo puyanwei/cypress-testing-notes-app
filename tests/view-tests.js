@@ -7,7 +7,7 @@ describe("View", () => {
     list.add("hello");
     list.add("goodbye");
     expect.isEqual(
-      "converts the note into a HTML list",
+      "converts the multiple note into a HTML list",
       view.convert(list.notelist),
       "<ul><li><div>hello</div></li><li><div>goodbye</div></li></ul>"
     );

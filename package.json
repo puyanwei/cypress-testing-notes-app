@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "http-server -a localhost -p 8000 -c-1"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/puyanwei/Notes-App-SPA/issues"
   },
-  "homepage": "https://github.com/puyanwei/Notes-App-SPA#readme"
+  "homepage": "https://github.com/puyanwei/Notes-App-SPA#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
 }
