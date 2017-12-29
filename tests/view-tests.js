@@ -1,14 +1,10 @@
-var list = new List();
-
-describe("View", () => {
-  var view = new View();
-
+describe("ListView", () => {
   describe("#convert", function() {
-    list.add("hello");
-    list.add("goodbye");
+    var mockList = { notelist: [{ text: "hello" }, { text: "goodbye" }] };
+    var listView = new ListView(mockList);
     expect.isEqual(
       "converts the multiple note into a HTML list",
-      view.convert(list.notelist),
+      listView.convert(mockList.notelist),
       "<ul><li><div>hello</div></li><li><div>goodbye</div></li></ul>"
     );
   });
