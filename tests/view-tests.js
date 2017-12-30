@@ -11,3 +11,15 @@ describe("ListView", () => {
     );
   });
 });
+
+describe("NoteView", () => {
+  describe("#convert", function() {
+    var note = "hello this is a single note";
+    noteView.convert(note);
+    expect.isEqual(
+      "converts the note into HTML",
+      noteView.converted,
+      "<div>hello this is a single note</div>"
+    );
+  });
+});
