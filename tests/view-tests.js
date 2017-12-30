@@ -15,10 +15,11 @@ describe("ListView", () => {
 describe("NoteView", () => {
   describe("#convert", function() {
     var note = "hello this is a single note";
-    noteView.convert(note);
+    var noteView = new NoteView();
+
     expect.isEqual(
       "converts the note into HTML",
-      noteView.converted,
+      noteView.convert(note),
       "<div>hello this is a single note</div>"
     );
   });
