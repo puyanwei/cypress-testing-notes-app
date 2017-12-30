@@ -9,6 +9,21 @@ describe("ListView", () => {
       listView.converted,
       "<ul><li><div>hello</div></li><li><div>goodbye</div></li></ul>"
     );
+
+    var longMockList = {
+      notelist: [
+        { text: "hello wow its very nice to meet you" },
+        { text: "this is a note of something i would like to write" }
+      ]
+    };
+    var listView = new ListView(longMockList);
+
+    listView.convert(longMockList);
+    expect.isEqual(
+      "limits the string to 20 characters and then converts the multiple notes into a HTML list",
+      listView.converted,
+      "<ul><li><div>hello wow its very n</div></li><li><div>this is a note of so</div></li></ul>"
+    );
   });
 
   describe("#shorten", function() {
