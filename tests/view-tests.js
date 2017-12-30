@@ -16,7 +16,7 @@ describe("ListView", () => {
     var listView = new ListView(mockList);
     var longNote =
       "Hello there this sentence might have more then 20 characters";
-      var shortNote = "this is a short note"
+    var shortNote = "This is a short note";
 
     expect.isEqual(
       "cuts the string to 20 characters if it is more",
@@ -25,8 +25,9 @@ describe("ListView", () => {
     );
     expect.isEqual(
       "keeps the string the same if it is not over 20 characters",
-      listView.shorten(longNote),
-      "Hello there this sen")
+      listView.shorten(shortNote),
+      "This is a short note"
+    );
   });
 });
 
@@ -41,6 +42,4 @@ describe("NoteView", () => {
       "<div>hello this is a single note</div>"
     );
   });
-});
-});
 });
