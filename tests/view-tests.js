@@ -1,6 +1,8 @@
 describe("ListView", () => {
   describe("#convert", function() {
-    var mockList = { notelist: [{ text: "hello" }, { text: "goodbye" }] };
+    var mockList = {
+      notelist: [{ text: "hello", id: 0 }, { text: "goodbye", id: 1 }]
+    };
     var listView = new ListView(mockList);
 
     listView.convert(mockList.notelist);
@@ -12,8 +14,8 @@ describe("ListView", () => {
 
     var longMockList = {
       notelist: [
-        { text: "hello wow its very nice to meet you" },
-        { text: "this is a note of something i would like to write" }
+        { text: "hello wow its very nice to meet you", id: 0 },
+        { text: "this is a note of something i would like to write", id: 1 }
       ]
     };
     var listView = new ListView(longMockList);
@@ -22,7 +24,7 @@ describe("ListView", () => {
     expect.isEqual(
       "limits the string to 20 characters and then converts the multiple notes into a HTML list",
       listView.converted,
-      "<ul><li><div>hello wow its very n</div></li><li><div>this is a note of so</div></li></ul>"
+      "<ul><li><div><a href='http://localhost:8080#notes/0'>hello wow its very n</a></div></li><li><div><a href='http://localhost:8080#notes/1'>this is a note of so</a></div></li></ul>"
     );
   });
 
