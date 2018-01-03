@@ -7,7 +7,7 @@ describe("ListView", () => {
     expect.isEqual(
       "converts the multiple notes into a HTML list",
       listView.converted,
-      "<ul><li><div>hello</div></li><li><div>goodbye</div></li></ul>"
+      "<ul><li><div><a href='http://localhost:8080#notes/0'>hello</a></div></li><li><div><a href='http://localhost:8080#notes/1'>goodbye</a></div></li></ul>"
     );
 
     var longMockList = {
