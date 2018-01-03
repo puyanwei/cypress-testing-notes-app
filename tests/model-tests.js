@@ -19,11 +19,11 @@ describe("List", () => {
       "goodbye"
     );
     expect.isEqual("there are two notes in the list", list.notelist.length, 2);
+    list.add("what a note!");
+    expect.isEqual(
+      "gives the note an id number automatically",
+      list.notelist[2].id,
+      2
+    );
   });
-  list.add("what a note!");
-  expect.isEqual(
-    "gives the note an id number automatically",
-    list.notelist[3].id,
-    3
-  );
 });
