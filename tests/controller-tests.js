@@ -10,7 +10,7 @@ describe("Controller", () => {
     ];
     var listView = {
       converted:
-        "<ul><li><div><a href='http://localhost:8080#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8080#notes/1'>this is a second not</a></div></li></ul>"
+        "<ul><li><div><a href='http://localhost:8000#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8000#notes/1'>this is a second not</a></div></li></ul>"
     };
 
     var controller = new Controller(list, listView, "app");
@@ -18,7 +18,7 @@ describe("Controller", () => {
     expect.isEqual(
       "gets the list view",
       controller.getListView(),
-      "<ul><li><div><a href='http://localhost:8080#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8080#notes/1'>this is a second not</a></div></li></ul>"
+      "<ul><li><div><a href='http://localhost:8000#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8000#notes/1'>this is a second not</a></div></li></ul>"
     );
   });
 
@@ -35,7 +35,7 @@ describe("Controller", () => {
     };
     var listView = {
       converted:
-        "<ul><li><div><a href='http://localhost:8080#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8080#notes/1'>this is a second not</a></div></li></ul>"
+        "<ul><li><div><a href='http://localhost:8000#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8000#notes/1'>this is a second not</a></div></li></ul>"
     };
 
     var controller = new Controller(list, listView, "app");

@@ -9,7 +9,7 @@ describe("ListView", () => {
     expect.isEqual(
       "converts the multiple notes into a HTML list",
       listView.converted,
-      "<ul><li><div><a href='http://localhost:8080#notes/0'>hello</a></div></li><li><div><a href='http://localhost:8080#notes/1'>goodbye</a></div></li></ul>"
+      "<ul><li><div><a href='http://localhost:8000#notes/0'>hello</a></div></li><li><div><a href='http://localhost:8000#notes/1'>goodbye</a></div></li></ul>"
     );
 
     var longMockList = {
@@ -24,7 +24,7 @@ describe("ListView", () => {
     expect.isEqual(
       "limits the string to 20 characters and then converts the multiple notes into a HTML list",
       listView.converted,
-      "<ul><li><div><a href='http://localhost:8080#notes/0'>hello wow its very n</a></div></li><li><div><a href='http://localhost:8080#notes/1'>this is a note of so</a></div></li></ul>"
+      "<ul><li><div><a href='http://localhost:8000#notes/0'>hello wow its very n</a></div></li><li><div><a href='http://localhost:8000#notes/1'>this is a note of so</a></div></li></ul>"
     );
   });
 
