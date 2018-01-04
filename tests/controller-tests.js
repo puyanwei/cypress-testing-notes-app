@@ -23,27 +23,26 @@ describe("Controller", () => {
   });
 
   describe("#getNoteView", () => {
-    var list = [
-      {
-        text: "hello this is a note"
-      },
-      {
-        text: "this is a second note that is longer"
-      }
-    ];
+    var list = {
+      notelist: [
+        {
+          text: "hello this is a note"
+        },
+        {
+          text: "this is a second note that is longer"
+        }
+      ]
+    };
     var listView = {
       converted:
         "<ul><li><div><a href='http://localhost:8080#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8080#notes/1'>this is a second not</a></div></li></ul>"
-    };
-    var noteView = {
-      convert: "<div>this is a second note that is longer</div>"
     };
 
     var controller = new Controller(list, listView, "app");
 
     expect.isEqual(
       "gets the first note view",
-      controller.getNoteView(0),
+      controller.getNoteView(1),
       "<div>this is a second note that is longer</div>"
     );
   });
