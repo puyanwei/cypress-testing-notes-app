@@ -47,7 +47,7 @@ describe("Controller", () => {
     );
   });
 
-  describe("#outputHTML", () => {
+  describe("#outputListView", () => {
     var list = { text: "hello this is another note" };
     var listView = {
       converted: "<ul><li><div>hello this is another note</div></li></ul>"
@@ -61,9 +61,11 @@ describe("Controller", () => {
 
     expect.isEqual(
       "outputs the note as HTML to the page",
-      controller.outputHTML(),
+      controller.outputListView(),
       "<ul><li><div>hello this is another note</div></li></ul>"
     );
+
+    //needs a test for outputNoteView!
 
     body.item(0).removeChild(mockElement);
   });
