@@ -1,16 +1,34 @@
-describe("NoteController", () => {
+describe("Controller", () => {
   describe("#getListView", () => {
-    var list = { text: "hello this is a note" };
-    var listView = {
-      converted: "<ul><li><div>hello this is a note</div></li></ul>"
-    };
-    var noteController = new NoteController(list, listView, "app");
+    var list = [
+      {
+        text: "hello this is a note"
+      },
+      {
+        text: "this is a second note that is longer"
+      }
+    ];
+    var listView = [
+      {
+        converted: "<ul><li><div>hello this is a note</div></li></ul>"
+      },
+      {
+        converted:
+          "<ul><li><div>this is a second note that is longer</div></li></ul>"
+      }
+    ];
+
+    var controller = new Controller(list, listView, "app");
 
     expect.isEqual(
       "gets the list view",
-      noteController.getListView(),
+      controller.getListView(),
       "<ul><li><div>hello this is a note</div></li></ul>"
     );
+  });
+
+  describe("#getNoteView", () => {
+    expect.isEqual("gets the note view", controller.getNoteView(), "");
   });
 
   describe("#outputHTML", () => {
@@ -23,11 +41,11 @@ describe("NoteController", () => {
     mockElement.id = "test";
     body.item(0).appendChild(mockElement);
 
-    var noteController = new NoteController(list, listView, "test");
+    var controller = new Controller(list, listView, "test");
 
     expect.isEqual(
       "outputs the note as HTML to the page",
-      noteController.outputHTML(),
+      controller.outputHTML(),
       "<ul><li><div>hello this is another note</div></li></ul>"
     );
 
