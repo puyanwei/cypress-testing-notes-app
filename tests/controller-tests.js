@@ -69,7 +69,3 @@ describe("Controller", () => {
     body.item(0).removeChild(mockElement);
   });
 });
-
-    body.item(0).removeChild(mockElement);
-  });
-});
