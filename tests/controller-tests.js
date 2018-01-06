@@ -12,9 +12,8 @@ describe("Controller", () => {
       converted:
         "<ul><li><div><a href='#notes/0'>hello this is a note</a></div></li><li><div><a href='#notes/1'>this is a second not</a></div></li></ul>"
     };
-    var noteView = {};
 
-    var controller = new Controller(list, listView, noteView, "app");
+    var controller = new Controller(list, listView, "app");
 
     expect.isEqual(
       "gets the list view",
@@ -38,13 +37,8 @@ describe("Controller", () => {
       converted:
         "<ul><li><div><a href='#notes/0'>hello this is a note</a></div></li><li><div><a href='#notes/1'>this is a second not</a></div></li></ul>"
     };
-    function noteView() {
-      function convert(text) {
-        return "<div>" + text + "</div>";
-      }
-    }
 
-    var controller = new Controller(list, listView, noteView, "app");
+    var controller = new Controller(list, listView, "app");
 
     expect.isEqual(
       "gets the first note view",
