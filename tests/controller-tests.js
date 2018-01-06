@@ -10,15 +10,16 @@ describe("Controller", () => {
     ];
     var listView = {
       converted:
-        "<ul><li><div><a href='http://localhost:8000#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8000#notes/1'>this is a second not</a></div></li></ul>"
+        "<ul><li><div><a href='#notes/0'>hello this is a note</a></div></li><li><div><a href='#notes/1'>this is a second not</a></div></li></ul>"
     };
+    var noteView = {};
 
-    var controller = new Controller(list, listView, "app");
+    var controller = new Controller(list, listView, noteView, "app");
 
     expect.isEqual(
       "gets the list view",
       controller.getListView(),
-      "<ul><li><div><a href='http://localhost:8000#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8000#notes/1'>this is a second not</a></div></li></ul>"
+      "<ul><li><div><a href='#notes/0'>hello this is a note</a></div></li><li><div><a href='#notes/1'>this is a second not</a></div></li></ul>"
     );
   });
 
@@ -35,10 +36,15 @@ describe("Controller", () => {
     };
     var listView = {
       converted:
-        "<ul><li><div><a href='http://localhost:8000#notes/0'>hello this is a note</a></div></li><li><div><a href='http://localhost:8000#notes/1'>this is a second not</a></div></li></ul>"
+        "<ul><li><div><a href='#notes/0'>hello this is a note</a></div></li><li><div><a href='#notes/1'>this is a second not</a></div></li></ul>"
     };
+    function noteView() {
+      function convert(text) {
+        return "<div>" + text + "</div>";
+      }
+    }
 
-    var controller = new Controller(list, listView, "app");
+    var controller = new Controller(list, listView, noteView, "app");
 
     expect.isEqual(
       "gets the first note view",
@@ -65,7 +71,26 @@ describe("Controller", () => {
       "<ul><li><div>hello this is another note</div></li></ul>"
     );
 
-    //needs a test for outputNoteView!
+    body.item(0).removeChild(mockElement);
+  });
+
+  describe("#outputNoteView", () => {
+    var list = { text: "hello this is another note" };
+    var listView = {
+      converted: "<ul><li><div>hello this is another note</div></li></ul>"
+    };
+    var body = document.getElementsByTagName("body");
+    var mockElement = document.createElement("span");
+    mockElement.id = "test";
+    body.item(0).appendChild(mockElement);
+
+    var controller = new Controller(list, listView, "test");
+
+    expect.isEqual(
+      "outputs the note as HTML to the page",
+      controller.outputNoteViewnoteView(),
+      "<div>hello this is another note</div>"
+    );
 
     body.item(0).removeChild(mockElement);
   });
