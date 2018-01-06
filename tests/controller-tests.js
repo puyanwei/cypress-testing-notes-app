@@ -79,10 +79,11 @@ describe("Controller", () => {
     body.item(0).appendChild(mockElement);
 
     var controller = new Controller(list, listView, "test");
+    var mockNote = "<div>hello this is another note</div>";
 
     expect.isEqual(
       "outputs the note as HTML to the page",
-      controller.outputNoteViewnoteView(),
+      controller.outputNoteView(mockNote),
       "<div>hello this is another note</div>"
     );
 
