@@ -1,0 +1,3 @@
+describe("Listeners", () => {
+  describe("#getText", () => {});
+});
