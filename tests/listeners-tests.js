@@ -3,19 +3,31 @@ describe("Listeners", () => {
     var body = document.getElementsByTagName("body");
     var mockForm = document.createElement("form");
     mockForm.id = "text";
-    var mockTextarea = document.createElement("textarea");
+    var mockTextArea = document.createElement("textarea");
+    mockTextArea.innerText = "hello this is a test";
     var mockButton = document.createElement("input");
     mockButton.setAttribute("type", "submit");
-    mockForm.appendChild(mockTextarea);
+    mockForm.appendChild(mockTextArea);
     mockForm.appendChild(mockButton);
     body.item(0).appendChild(mockForm);
 
-    var list = { add: "" };
+    function List() {
+      this.notelist = [];
 
+      List.prototype.add = function(text) {
+        let id = this.notelist.length;
+        let note = new Note(text, id);
+        this.notelist.push(note);
+      };
+    }
+    list = new List();
     listeners = new Listeners(list);
-    listeners.addTextToList(list);
-    console.log(noteText);
-    console.log(list);
-    expect.isEqual("gets the text from the text box", listeners.list, "hello");
+
+    listeners.addTextToList();
+    expect.isEqual(
+      "gets the text from the text box and adds it to the list",
+      listeners.list.notelist[0].text,
+      "hello this is a test"
+    );
   });
 });
