@@ -20,6 +20,7 @@ describe("Listeners", () => {
         this.notelist.push(note);
       };
     }
+
     list = new List();
     listeners = new Listeners(list);
 
@@ -29,5 +30,7 @@ describe("Listeners", () => {
       listeners.list.notelist[0].text,
       "hello this is a test"
     );
+
+    body.item(0).removeChild(mockForm);
   });
 });
