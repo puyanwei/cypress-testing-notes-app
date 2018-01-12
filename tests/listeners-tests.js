@@ -24,5 +24,16 @@ describe("Listeners", () => {
     body.item(0).removeChild(mockForm);
   });
 
-  describe("#createListView", () => {});
+  describe("#createListView", () => {
+    list = new List();
+    listeners = new Listeners(list);
+    list.add("this is a test sentence for the list view test");
+    list.add("this is another test for the list");
+    listeners.createListView(list);
+    expect.isEqual(
+      "creates a list view from the list",
+      listeners.listView.converted,
+      "<ul><li><div><a href='#notes/0'>this is a test sente</a></div></li><li><div><a href='#notes/1'>this is another test</a></div></li></ul>"
+    );
+  });
 });
