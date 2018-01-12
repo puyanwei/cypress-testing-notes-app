@@ -11,16 +11,6 @@ describe("Listeners", () => {
     mockForm.appendChild(mockButton);
     body.item(0).appendChild(mockForm);
 
-    function List() {
-      this.notelist = [];
-
-      List.prototype.add = function(text) {
-        let id = this.notelist.length;
-        let note = new Note(text, id);
-        this.notelist.push(note);
-      };
-    }
-
     list = new List();
     listeners = new Listeners(list);
 
@@ -33,4 +23,6 @@ describe("Listeners", () => {
 
     body.item(0).removeChild(mockForm);
   });
+
+  describe("#createListView", () => {});
 });
