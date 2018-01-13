@@ -1,12 +1,24 @@
-html {
-  text-align: center;
-}
-
-ul {
+/* html {
   text-align: left;
   margin-left: 30%;
+} */
+
+html {
+  position: relative;
+  min-width: 1024px;
+  margin-left: 50px;
 }
+
+/* ul {
+  text-align: left;
+  margin-left: 30%;
+} */
 
 textarea {
   font-size: 18px;
 }
+
+/* #button {
+  float: left;
+  margin-left: 30%;
+} */
