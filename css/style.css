@@ -16,6 +16,8 @@ h2 {
 
 textarea {
   font-size: 18px;
+  opacity: 0.6;
+  border: 1px solid black;
 }
 
 ul {
