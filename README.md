@@ -62,8 +62,32 @@ High quality coding practices was written in mind with this project.
 * Commits are regular, small and have good descriptions.
 * Good naming conventions, do not repeat (DRY), single responsibility principle, and naming reveals intention.
 
+## Process
+
+Building this web app seemed more long winded then other projects but then that meant it was more thorough and professional.
+
+The first task was to create our own specRunner testing framework. I spiked out ideas, and then worked out how to output the test results to the console, and then the page. Once that step was done, I did some styling and created extra tests to make sure it worked.
+
+Once that was done I began work on the Notes App. The first process was to TDD the model for the list and its individual notes. Next was the views, which was translating the model's data to output to HTML.
+
+The final part was to create a controller to use to call the views and models and then link them to the index.html.
+
+Throughout the process I played around with the html combined with javascript on the side to help me understand how everything worked.
+
+## Challenges
+
+Throughout this project I found quite a few things challenging. Following the challenge walkthrough, it was difficult to see how things linked together in the beginning, but later on it became more apparent, especially with the help of learning through experimenting html and javascript.
+
+The file structure was confusing to work out, as initially it started out with all the javascript files in one file. Its also difficult to know when is a good time to restructure things, and sometimes quite a tangent from the current task.
+
+Testing the controller was tough. This is because it involved a lot of mocking to isolate what you want to test. It can become quite confusing to what is being mocked, and also if what you are testing is truly testing what you want it to.
+
+I had also discovered that you can create elements in the page through commands, so I tried to mock a fake form and then remove it after the test. My suspicions are that this may not be best, but it allowed me to feature test as if I was a user.
+
 ## Potential Directions
 
 The following features I would like to implement in the future;
 
 * I would like to have a back button so that it returns to the list view in the note view.
+* Tests in the controller are unfinished. I was unable to work out how to test the event listener. I believe that I may have to write a complete fake version of my views and models for it to be an effective test.
+* Further refactoring should be explored as my Listeners constructor has too many functions in it, and that some of them may not be relevant to the Listeners responsibility.
