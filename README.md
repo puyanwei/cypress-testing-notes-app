@@ -62,9 +62,13 @@ High quality coding practices was written in mind with this project.
 * Commits are regular, small and have good descriptions.
 * Good naming conventions, do not repeat (DRY), single responsibility principle, and naming reveals intention.
 
+## Aim
+
+During the course at Makers Academy, we were given a choice to complete this challenge in groups or in pairing. Pairing was given rough directions and groups did not get any. I had chosen to work in groups [here](https://github.com/puyanwei/DwepsNotePad), but I was interested to see what the pairing groups did and how that compared. I also thought this would be a good way to reinforce my HTML and Javascript knowledge.
+
 ## Process
 
-Building this web app seemed more long winded then other projects but then that meant it was more thorough and professional.
+Building this web app seemed more long winded then the groups version but then that meant it was more thorough and professional.
 
 The first task was to create our own specRunner testing framework. I spiked out ideas, and then worked out how to output the test results to the console, and then the page. Once that step was done, I did some styling and created extra tests to make sure it worked.
 
@@ -91,3 +95,4 @@ The following features I would like to implement in the future;
 * I would like to have a back button so that it returns to the list view in the note view.
 * Tests in the controller are unfinished. I was unable to work out how to test the event listener. I believe that I may have to write a complete fake version of my views and models for it to be an effective test.
 * Further refactoring should be explored as my Listeners constructor has too many functions in it, and that some of them may not be relevant to the Listeners responsibility.
+* Deployment to Heroku so that it is online.
