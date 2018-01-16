@@ -2,7 +2,7 @@ html {
   position: relative;
   min-width: 1024px;
   margin-left: 50px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h1 {
@@ -24,7 +24,6 @@ textarea {
 
 ul {
   font-family: "Roboto Mono", monospace;
-  font-size: 30px;
 }
 
 div {
