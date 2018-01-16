@@ -2,11 +2,11 @@
 
 This is a single page app that allows a user to record notes for themselves.
 
-![screen shot 2018-01-16 at 00 15 03](https://user-images.githubusercontent.com/14803518/34966264-718cfd14-fa52-11e7-955f-268fb438d2ea.png)
+![screen shot 2018-01-16 at 18 53 37](https://user-images.githubusercontent.com/14803518/35006527-bcd20de0-faee-11e7-971b-f57d0c8ba779.png)
 
 Clicking the shortened note in the list will show the note in full.
 
-![screen shot 2018-01-16 at 00 15 23](https://user-images.githubusercontent.com/14803518/34966284-8b2c1dcc-fa52-11e7-8de6-55cdd99e21b9.png)
+![screen shot 2018-01-16 at 18 53 49](https://user-images.githubusercontent.com/14803518/35006518-b7ccb6a6-faee-11e7-89f7-63763ec474b4.png)
 
 Testing is done via my own custom made vanilla javascript SpecRunner. A separate repo for my SpecRunner can be found [here](https://github.com/puyanwei/espresso).
 
