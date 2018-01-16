@@ -84,7 +84,7 @@ describe("Controller", () => {
     expect.isEqual(
       "outputs the note as HTML to the page",
       controller.outputNoteView(mockNote),
-      "<h2>Your Note</h2><div>hello this is another note</div>"
+      "<h2><u>Your Note</u></h2><div>hello this is another note</div>"
     );
 
     body.item(0).removeChild(mockElement);
