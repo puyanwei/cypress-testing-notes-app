@@ -84,6 +84,10 @@ Throughout this project I found quite a few things challenging. Following the ch
 
 The file structure was confusing to work out, as initially it started out with all the javascript files in one file. Its also difficult to know when is a good time to restructure things, and sometimes quite a tangent from the current task.
 
+Other needles that kept weighing on me was having good naming conventions. It became clear to me early it could be very confusing in having "Notes" be the name of the front page logic, even though it is the name of the web app "List" became more descriptive.
+
+Scope was also quite confusing at times. In my hashChange event listener callback function "showNote" it referred to the window url which reset the "this" so I had to use bind so it would refer to the correct function. I later discovered that this was one of the benefits of ES6's arrow functions which would avoid this exact scoping problem.
+
 Testing the controller was tough. This is because it involved a lot of mocking to isolate what you want to test. It can become quite confusing to what is being mocked, and also if what you are testing is truly testing what you want it to.
 
 I had also discovered that you can create elements in the page through commands, so I tried to mock a fake form and then remove it after the test. My suspicions are that this may not be best, but it allowed me to feature test as if I was a user.
