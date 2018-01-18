@@ -62,16 +62,14 @@ describe("Controller", () => {
     });
 
   describe("#outputNoteView", () => {
-    var list = { text: "hello this is another note" };
-    var listView = {
-      converted: "<ul><li><div>hello this is another note</div></li></ul>"
-    };
+    var mockList;
+    var mockListView;
     var body = document.getElementsByTagName("body");
     var mockElement = document.createElement("span");
     mockElement.id = "test";
     body.item(0).appendChild(mockElement);
 
-    var controller = new Controller(list, listView, "test");
+    var controller = new Controller(mockList, mockListView, "test");
     var mockNote = "<div>hello this is another note</div>";
 
     expect.isEqual(
