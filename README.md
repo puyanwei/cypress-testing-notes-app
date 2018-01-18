@@ -48,7 +48,9 @@ So I can see all the information in the note
 
 ## Installation
 
-Go to your terminal and `git clone git@github.com:puyanwei/Notes-App-SPA.git`. Go to the project folder install node by typing in `npm install`. Once installed type in `npm start` to start the server and `open index.html` to open the webpage.
+Go to your terminal type in `git clone git@github.com:puyanwei/Notes-App-SPA.git`.
+`cd notes-app` and install node by typing in `npm install`.
+Once installed type in `npm start` to start the server and then `open index.html` to open the webpage.
 
 To run the tests `open specRunner.html`
 
