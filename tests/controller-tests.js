@@ -1,19 +1,12 @@
 describe("Controller", () => {
   describe("#getListView", () => {
-    var list = [
-      {
-        text: "hello this is a note"
-      },
-      {
-        text: "this is a second note that is longer"
-      }
-    ];
+    var mockList;
     var listView = {
       converted:
         "<ul><li><div><a href='#notes/0'>hello this is a note</a></div></li><li><div><a href='#notes/1'>this is a second not</a></div></li></ul>"
     };
 
-    var controller = new Controller(list, listView, "app");
+    var controller = new Controller(mockList, listView, "app");
 
     expect.isEqual(
       "gets the list view",
