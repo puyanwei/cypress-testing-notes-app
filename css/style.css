@@ -1,31 +1,31 @@
-html {
-  position: relative;
-  min-width: 1024px;
-  margin-left: 50px;
-  font-size: 20px;
+body {
+    display: block;
+    min-width: 1024px;
+    margin-left: 50px;
+    font-size: 20px;
 }
 
 h1 {
-  font-family: "Indie Flower", cursive;
-  font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
 }
 
 h2 {
-  font-family: "Indie Flower", cursive;
-  font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
 }
 
 textarea {
-  font-family: "Roboto Mono", monospace;
-  font-size: 18px;
-  opacity: 0.6;
-  border: 1px solid black;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    opacity: 0.6;
+    border: 1px solid black;
 }
 
 ul {
-  font-family: "Roboto Mono", monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 div {
-  font-family: "Roboto Mono", monospace;
+    font-family: 'Roboto Mono', monospace;
 }

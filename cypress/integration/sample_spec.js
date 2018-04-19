@@ -4,3 +4,8 @@ describe('My first Cypress test!', () => {
         expect(true).to.not.equal(false);
     });
 });
+describe('Lets go to the Kitchen Sink!', () => {
+    it('visits cypress.io', () => {
+        cy.visit('http://localhost:8000/');
+    });
+});
