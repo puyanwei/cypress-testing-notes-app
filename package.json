@@ -1,26 +1,30 @@
 {
-  "name": "notes-app",
-  "version": "1.0.0",
-  "description": "A single page app for note taking",
-  "main": "app.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "npm test",
-    "start": "http-server -a localhost -p 8000 -c-1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/puyanwei/Notes-App-SPA.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/puyanwei/Notes-App-SPA/issues"
-  },
-  "homepage": "https://github.com/puyanwei/Notes-App-SPA#readme",
-  "dependencies": {
-    "http-server": "^0.10.0"
-  }
+    "name": "notes-app",
+    "version": "1.0.0",
+    "description": "A single page app for note taking",
+    "main": "app.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "npm test",
+        "start": "http-server -a localhost -p 8000 -c-1",
+        "cypress:open": "cypress open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/puyanwei/Notes-App-SPA.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/puyanwei/Notes-App-SPA/issues"
+    },
+    "homepage": "https://github.com/puyanwei/Notes-App-SPA#readme",
+    "dependencies": {
+        "http-server": "^0.10.0"
+    },
+    "devDependencies": {
+        "cypress": "^2.1.0"
+    }
 }
